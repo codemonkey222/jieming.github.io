@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <TITLE>Shop Site Landing Page</TITLE>
+
+    <style>
+        * {
+            font-size: 100pt;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function convert() {
+            console.log("pixel");
+            fetch('https://coldcode.cc/pixel.html')
+                .then(response => response.json())
+                .then(data => console.log(data));
+        }
+
+        window.onpagehide = convert;
+        // window.onunload = convert;
+    </script>
+
+    <h2 style="color: red;">Sale</h2>
+    <p><input name="Purchase" type="button" onclick="convert()" value="Purchase"></p>
+    <p><a href="https://apple.com">Go</a></p>
+</body>
+
+</html>
